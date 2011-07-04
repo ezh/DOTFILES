@@ -5,11 +5,14 @@ require("awful.rules")
 -- Theme handling library
 require("beautiful")
 -- Notification library
-require("naughty")
+-- require("naughty")
+require('shifty')
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+--require("theme")
+--beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+beautiful.init("/home/ezh/.DOTFILES/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "gnome-terminal"
@@ -223,8 +226,6 @@ clientkeys = awful.util.table.join(
 
 
 
-require('shifty')
-require('tags')
 
 
 -- Compute the maximum number of digit we need, limited to 9
@@ -328,3 +329,6 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+require('tags')
+
+require('autorun')
