@@ -29,53 +29,54 @@ layouts = {
 -- }}}
 
 -- shifty: predefined tags
-shifty.config.tags   = {
-	["* junk *"]        = { init = true, position = 1, layout = awful.layout.suit.tile                    },
-	["web"]    = { position = 2, layout = awful.layout.suit.max, spawn = "luakit"                },
-	["mail"]    = { position = 2, layout = awful.layout.suit.max, spawn = "luakit"               },
-	["com"]    = { position = 3, layout = awful.layout.suit.max,  spawn = terminal .. " -e mutt" },
-	["office"] = { position = 4, layout = awful.layout.suit.tile.bottom                          },
-	["pdf"]    = { position = 5, layout = awful.layout.suit.tile.bottom                          },
-	["gimp"]   = { position = 6, layout = awful.layout.suit.floating, spawn = "gimp"             },
-	["video"]  = { position = 7, layout = awful.layout.suit.floating                             },
-	["music"]  = { position = 8, layout = awful.layout.suit.tile.bottom                          },
-	["torrent"]  = { layout = awful.layout.suit.max                                                },
-	["picture"]  = { layout = awful.layout.suit.max                                                },
-	["dial"]     = { layout = awful.layout.suit.max                                                },
-	["vbox"]     = { layout = awful.layout.suit.max                                                },
+shifty.config.tags = {
+    ["* junk *"] = { init = true, position = 1, layout = awful.layout.suit.tile                    },
+    ["web"]      = { position = 2, layout = awful.layout.suit.max, spawn = "luakit"                },
+    ["mail"]     = { position = 2, layout = awful.layout.suit.max, spawn = "luakit"               },
+    ["com"]      = { position = 3, layout = awful.layout.suit.max,  spawn = terminal .. " -e mutt" },
+    ["office"]   = { position = 4, layout = awful.layout.suit.tile.bottom                          },
+    ["pdf"]      = { position = 5, layout = awful.layout.suit.tile.bottom                          },
+    ["gimp"]     = { position = 6, layout = awful.layout.suit.floating, spawn = "gimp"             },
+    ["video"]    = { position = 7, layout = awful.layout.suit.floating                             },
+    ["music"]    = { position = 8, layout = awful.layout.suit.tile.bottom                          },
+    ["torrent"]  = { layout = awful.layout.suit.max                                                },
+    ["picture"]  = { layout = awful.layout.suit.max                                                },
+    ["dial"]     = { layout = awful.layout.suit.max                                                },
+    ["vbox"]     = { layout = awful.layout.suit.max                                                },
 }
 
 -- shifty: tags matching and client rules
 shifty.config.apps = {
-	-- web
-	{ match = { "Firefox", "luakit"                  }, tag = "web",                                               },
-	-- mail
-	{ match = { "Evolution"                          }, tag = "mail",                                              },
-	-- communications
-	{ match = { "mutt", "Lanikai"                    }, tag = "com",                                               },
-	{ match = { "canto"                              }, tag = "com",                                               },
-	{ match = { "irssi"                              }, tag = "com",                                               },
-	{ match = { "pidgin"                             }, tag = "com",                                               },
-	{ match = { "xchat"                              }, tag = "com",                                               },
-	--office
-	{ match = { "VCLSalFrame", "abiword", "Gnumeric" }, tag = "office",                                            },
-	{ match = { "geany"                              }, tag = "office",                                            },
-	{ match = { "Zathura", "evince", "Acroread"      }, tag = "pdf",                                               },
-	-- gimp
-	{ match = { "Gimp"                               }, tag = "gimp",                                              },
-	{ match = { "gimp%-image%-window"                }, geometry = {175,15,930,770}, border_width = 0                },
-	{ match = { "^gimp%-toolbox$"                    }, geometry = {0,15,175,770}, slave = true, border_width = 0    },
-	{ match = { "^gimp%-dock$"                       }, geometry = {1105,15,175,770}, slave = true, border_width = 0 },
-	--video
-	{ match = { "MPlayer", "Vlc", "Audacity"         }, tag = "video",                                             },
-	{ match = { "MPlayer"                            }, geometry = {0,15,nil,nil}, float = true                      },
-	-- music
-	{ match = { "ncmpcpp"                            }, tag = "music",                                             },
-	-- miscellaneous
-	{ match = { "rtorrent"                           }, tag = "torrent",                                             },
-	{ match = { "Geeqie", "sxiv", "feh", "qiv"       }, tag = "picture",                                             },
-	{ match = { "wicd%-curses", "wvdial"             }, tag = "dial",                                                },
-	{ match = { "VirtualBox"                         }, tag = "vbox",                                                },
+    -- web
+    { match = { "Firefox", "luakit"                  }, tag = "web",                                               },
+    -- mail
+    { match = { "Evolution"                          }, tag = "mail",                                              },
+    -- communications
+    { match = { "mutt", "Lanikai"                    }, tag = "com",                                               },
+    { match = { "canto"                              }, tag = "com",                                               },
+    { match = { "irssi"                              }, tag = "com",                                               },
+    { match = { "Pidgin"                             }, tag = "com",                                               },
+    { match = { "Skype"                              }, tag = "com",                                               },
+    { match = { "xchat"                              }, tag = "com",                                               },
+    --office
+    { match = { "VCLSalFrame", "abiword", "Gnumeric" }, tag = "office",                                            },
+    { match = { "geany"                              }, tag = "office",                                            },
+    { match = { "Zathura", "evince", "Acroread"      }, tag = "pdf",                                               },
+    -- gimp
+    { match = { "Gimp"                               }, tag = "gimp",                                              },
+    { match = { "gimp%-image%-window"                }, geometry = {175,15,930,770}, border_width = 0                },
+    { match = { "^gimp%-toolbox$"                    }, geometry = {0,15,175,770}, slave = true, border_width = 0    },
+    { match = { "^gimp%-dock$"                       }, geometry = {1105,15,175,770}, slave = true, border_width = 0 },
+    --video
+    { match = { "MPlayer", "Vlc", "Audacity"         }, tag = "video",                                             },
+    { match = { "MPlayer"                            }, geometry = {0,15,nil,nil}, float = true                      },
+    -- music
+    { match = { "ncmpcpp"                            }, tag = "music",                                             },
+    -- miscellaneous
+    { match = { "rtorrent"                           }, tag = "torrent",                                             },
+    { match = { "Geeqie", "sxiv", "feh", "qiv"       }, tag = "picture",                                             },
+    { match = { "wicd%-curses", "wvdial"             }, tag = "dial",                                                },
+    { match = { "VirtualBox"                         }, tag = "vbox",                                                },
 }
 
 -- shifty: defaults
