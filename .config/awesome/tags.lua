@@ -1,21 +1,6 @@
 -- TAGS + TAG MATCHING
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
---layouts =
---{
---    awful.layout.suit.floating,
---    awful.layout.suit.tile,
---    awful.layout.suit.tile.left,
---    awful.layout.suit.tile.bottom,
---    awful.layout.suit.tile.top,
---    awful.layout.suit.fair,
---    awful.layout.suit.fair.horizontal,
---    awful.layout.suit.spiral,
---    awful.layout.suit.spiral.dwindle,
---    awful.layout.suit.max,
---    awful.layout.suit.max.fullscreen,
---    awful.layout.suit.magnifier
---}
 -- }}}
 
 -- layouts
@@ -91,25 +76,14 @@ shifty.config.apps = {
 	{ match = { "Geeqie", "sxiv", "feh", "qiv"       }, tag = "picture",                                             },
 	{ match = { "wicd%-curses", "wvdial"             }, tag = "dial",                                                },
 	{ match = { "VirtualBox"                         }, tag = "vbox",                                                },
-
-	-- client manipulation
-	{ match = { "" },
-		honorsizehints = false,
-		buttons = awful.util.table.join (
-		awful.button({        }, 1, function (c) client.focus = c; c:raise() end),
-		awful.button({ modkey }, 1, awful.mouse.client.move),
-		awful.button({ modkey }, 3, awful.mouse.client.resize))
-	},
 }
 
 -- shifty: defaults
-shifty.config.defaults = {
-	layout = awful.layout.suit.max,
-}
+shifty.config.defaults = {layout = awful.layout.suit.max}
 shifty.config.layouts = layouts
 -- Set keys
 root.keys(globalkeys)
 shifty.config.globalkeys = globalkeys
 shifty.config.clientkeys = clientkeys
--- }}}
+
 shifty.init()
