@@ -76,7 +76,8 @@ globalkeys = awful.util.table.join(
                   mypromptbox[mouse.screen].widget,
                   awful.util.eval, nil,
                   awful.util.getdir("cache") .. "/history_eval")
-              end)
+              end),
+    awful.key({ modkey            }, "`",      function() shifty.add({ rel_index = 1, name = "* temp *" }) end)
 )
 
 clientkeys = awful.util.table.join(
@@ -100,6 +101,11 @@ clientkeys = awful.util.table.join(
         end)
 )
 
+clientbuttons = awful.util.table.join(
+    awful.button({ }, 1, function (c) client.focus = c; c:raise() end),
+    awful.button({ modkey }, 1, awful.mouse.client.move),
+    awful.button({ modkey }, 3, awful.mouse.client.resize))
+
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 --tags = {}
@@ -116,7 +122,7 @@ shifty.config.tags = {
     ["mail"]     = { exclusive = true, position = 2, layout = awful.layout.suit.max, spawn = "luakit"                },
     ["com"]      = { exclusive = true, position = 3, layout = awful.layout.suit.spiral, spawn = terminal .. " -e mutt" },
     ["emacs"]    = { exclusive = true, position = 4, layout = awful.layout.suit.spiral                               },
-    ["office"]   = { exclusive = true, position = 5, layout = awful.layout.suit.max                          },
+    ["office"]   = { position = 5, layout = awful.layout.suit.max                          },
     ["pdf"]      = { exclusive = true, position = 6, layout = awful.layout.suit.tile.bottom                          },
     ["gimp"]     = { exclusive = true, position = 7, layout = awful.layout.suit.floating, spawn = "gimp"             },
     ["video"]    = { exclusive = true, position = 8, layout = awful.layout.suit.floating                             },
@@ -125,6 +131,7 @@ shifty.config.tags = {
     ["picture"]  = { exclusive = true, layout = awful.layout.suit.max                                                },
     ["dial"]     = { exclusive = true, layout = awful.layout.suit.max                                                },
     ["vbox"]     = { exclusive = true, layout = awful.layout.suit.max                                                },
+    ["chainsaw"] = { exclusive = true, layout = awful.layout.suit.spiral                                             },
 }
 
 -- shifty: tags matching and client rules
@@ -161,8 +168,9 @@ shifty.config.apps = {
     { match = { "Geeqie", "sxiv", "feh", "qiv"       }, tag = "picture",                                           },
     { match = { "wicd%-curses", "wvdial"             }, tag = "dial",                                              },
     { match = { "VirtualBox"                         }, tag = "vbox",                                              },
+    { match = { "org-apache-log4j-chainsaw-LogUI"    }, tag = "chainsaw"                                           },
     { match = { "Guake.py"                           }, transient_for = true, float = true, intrusive = true       },
-    { match = { ""                                   }, maximized_horizontal = false, maximized_vertical = false,  },
+    { match = { ""                                   }, maximized_horizontal = false, maximized_vertical = false, buttons = clientbuttons  },
 }
 
 -- shifty: defaults
