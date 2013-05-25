@@ -1,0 +1,313 @@
+body {
+	background-color: #fff;
+	background-image: url('images/rubric/gradient.gif');
+	background-attachment: fixed;
+	background-position: bottom;
+	background-repeat: repeat-x;
+}
+
+#content {
+	margin-right: 20em;
+	margin-left: 40px;
+	background-color: #fff;
+	padding: .5em;
+	margin-top: 160px;
+	border: 1px #eee solid;
+}
+
+* html #content {
+	margin-top: 180px;
+}
+
+#header {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	background-image: url(http://digimead.files.wordpress.com/2013/05/ezh_wp.png);
+	background-position: top right;
+	background-repeat: no-repeat;
+	width: 80%;
+	margin: 0;
+	height: 150px;
+	padding-left: 45px;
+	font-family: Georgia;
+	font-weight: normal;
+	font-size: 3em;
+	line-height: 1;
+        color:#382500;
+}
+
+#menu {
+	width: 14em;
+	position: absolute;
+	float: right;
+	top: 200px;
+	right: 5em;
+	font-size: 90%;
+}
+
+* html #menu {
+	right: 5em;
+}
+r
+#menu ul {
+	margin-top: 0;
+	padding-left: 0;
+	margin-left: 0;
+	list-style: none;
+	font-weight: bold;
+	color: #B54141;
+}
+
+#menu h2 {
+	font-size: 1em;
+}
+
+#menu a:link, #menu a:visited {
+	color: black;
+	border: none;
+}
+
+* html #menu a {
+	word-wrap: break-word;
+}
+
+#menu ul ul {
+	margin-left: 0;
+	list-style: disc;
+	list-style-position: inside;
+	padding-left: .5em;
+	text-indent: 0;
+	font-weight: normal;
+	color: black;
+}
+
+#menu form {
+	margin: 0;
+}
+
+#menu form br {
+	display: none;
+}
+
+#content h2 {
+	font-size: .9em;
+	color: #333;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight: normal;
+	margin-bottom: .33em;
+}
+
+.storytitle {
+	color: #b54141;
+	margin-top: .25em;
+}
+
+.post-categories {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+.post-categories li {
+	display: inline;
+	margin-left: 3px;
+	padding: 0;
+}
+
+.post .meta {
+	font-size: .85em;
+	color: #333;
+}
+
+.post .meta * {
+	margin-top: 0;
+}
+
+.post .feedback {
+	margin-bottom: 3em;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 1px;
+}
+
+.feedback {
+	clear: both;
+}
+
+.sticky {
+	background: #f7f7f7;
+	padding: 5px 10px 10px;
+	margin: 5px 0 15px;
+}
+
+.sticky a {
+	border-color: #ccc;
+}
+
+#reply-title {
+	font-size: .9em;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	overflow: hidden;
+	width: 100%;
+}
+
+#respond input[type=text] {
+	float: left;
+	margin-right: .5em;
+}
+
+#ie7 #respond input[type=text] {
+	float: none;
+	margin-right: 0;
+	margin-left: .5em;
+}
+
+.comment-form-author label,
+.comment-form-email label,
+.comment-form-url label {
+	font-size: 10px;
+}
+
+.comment-form-comment label {
+	display: none;
+}
+
+p.credit {
+	margin-right: 20em;
+	margin-left: 40px;
+	padding: .5em;
+	font-size: 90%;
+}
+
+p.credit a:visited, p.credit a:link {
+	border: none;
+}
+
+body {
+	font-family: Verdana, Tahoma, Arial, sans-serif;
+	font-size: 80%;
+}
+
+#content div, p, td, th, li {
+	font-size: 1em;
+	line-height: 1.65em;
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	border: 1px solid white;
+	color: #000
+}
+
+a:hover {
+	border: 1px solid #ccc;
+}
+
+#content a:hover {
+	background-color: #eee;
+}
+
+#comment {
+	width: 95%;
+}
+
+* html #comment {
+	width: 400px;
+}
+
+#commentlist li .avatar {
+	float: right;
+	padding: 2px;
+	border: 1px solid #eee;
+	margin-right: 15px;
+}
+
+#commentlist li .children {
+	list-style-type: none;
+}
+
+img.centered, img.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+img.alignright {
+	padding: 4px;
+	margin: 0 0 2px 7px;
+	display: inline;
+}
+
+img.alignleft {
+	padding: 4px;
+	margin: 0 7px 2px 0;
+	display: inline;
+}
+
+.alignright {
+	float: right;
+}
+
+.alignleft {
+	float: left;
+}
+
+.aligncenter, div.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption {
+	border: 1px solid #ddd;
+	text-align: center;
+	background-color: #f3f3f3;
+	padding-top: 4px;
+	margin: 10px;
+	-moz-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+	font-size: 11px;
+	line-height: 17px;
+	padding: 0 4px 5px;
+	margin: 0;
+}
+
+.linkcat h2 {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+object,
+embed {
+	max-width: 100%;
+}
+
+.comment object,
+.comment embed {
+	margin: 1em 0;
+	max-width: 640px;
+}
